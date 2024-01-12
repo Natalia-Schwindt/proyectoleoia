@@ -70,7 +70,7 @@ body{
     display: flex;
     justify-content: center;
     color: rgb(12, 26, 51);
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 25px auto;
 }
 .galleryImgText{
@@ -98,7 +98,7 @@ body{
 }
 
 .modificacionCapital{
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: RemesloSTD;
     color: rgb(12, 26, 51);
 }
