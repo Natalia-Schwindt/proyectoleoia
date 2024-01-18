@@ -2,6 +2,12 @@
 @font-face {font-family: meltedMonster; src: url(./font/meltedMonster.ttf);}
 @font-face {font-family: RemesloSTD; src: url(./font/RemesloSTD.otf);}
 
+:root{
+    --color: rgb(12, 26, 51);
+    --color-fuente: rgb(189, 198, 207);
+    --color-fondo: rgba(46, 43, 52, 0.789);
+}
+
 *{  
     margin: 0;
     padding: 0;
@@ -9,28 +15,19 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
-body{
-    width: 100%;
-    height: 100dvh;
-}
 .hero{
-    width: 100%;
     height: 100vh;
     background-image: url(./assets/giro3.jpg);
     background-position: center;
     background-size: cover;
-    color: rgb(240, 248, 255);
     background-attachment: fixed;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
-.heroTittle{
+.hero h1:first-of-type{
     font-family: meltedMonster;
     font-size: 12rem;
-    margin-left: 3rem;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 4px rgb(124, 151, 183);
     z-index: 10;
@@ -41,26 +38,26 @@ body{
     position: absolute;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(3px);
-    color: rgba(240, 248, 255, 0.2);
 }
 .navbar{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
     list-style: none;
-    margin: 20px;
+    margin: 30px 20px;
+    gap: 5px;
     font-size: 25px;
     position: absolute;
-    top: 10px
+    top: 20px;
 }
 .navbar a{
-    color: rgb(189, 198, 207);
-    margin: 0 10px;
+    color: var(--color-fuente);
 }
 .container{
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(46, 43, 52, 0.789);
+    background-color: var(--color-fondo);
 }
 .galleryContainer{
     display: flex;
@@ -69,7 +66,7 @@ body{
 .galleryContainer h2{
     display: flex;
     justify-content: center;
-    color: rgb(12, 26, 51);
+    color: var(--color);
     font-size: 5rem;
     margin: 25px auto;
 }
@@ -91,14 +88,32 @@ body{
 }
 .galleryText{
     position: absolute;
+    width: 90%;
     bottom: 40px;
     left: 100px;
-    color: #fff;
-    width: 90%;
+    color: var(--color-fuente);
 }
 
 .modificacionCapital{
     font-size: 6rem;
     font-family: RemesloSTD;
-    color: rgb(12, 26, 51);
+    color: var(--color);
+}
+.piedepagina{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    list-style: none;
+    font-size: 25px;
+    background-color: var(--color-fondo);
+    position: relative;
+}
+.piedepagina a{
+    margin-left: 50px;
+    color: var(--color)
+}
+.piedepagina p{
+    position: absolute;
+    right: 40%;
 }
